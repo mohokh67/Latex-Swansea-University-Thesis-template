@@ -1,0 +1,116 @@
+%-----------------------------------------------------------------------------------------
+% This template has designed by Mohamad Khaleqi
+% You're very welcome to edit and use this template
+% 2015-02-26
+% Swansea University
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[toc,page]{appendix}
+
+\usepackage{lastpage} % Required to determine the last page for 
+\usepackage{graphicx} % Required to insert images
+\graphicspath{ {Figs/} }
+\usepackage{comment} % Comment
+\usepackage[utf8]{inputenc} 
+\usepackage{url} % URL in Footnote  
+\usepackage{cite} % BibLatex
+\usepackage{listings} % hard code
+\usepackage[document]{ragged2e} % Justify
+\usepackage{wrapfig} % add picture wraped by text
+\usepackage{arydshln} % add hash line for tables
+\usepackage{booktabs} % new tables
+
+\usepackage{xcolor}
+% \newcommand\mytodo[1]{\textcolor{red}{#1}}
+\usepackage{lipsum}
+
+\usepackage{tcolorbox} % colour box
+\usepackage{float}
+\usepackage{courier}
+\usepackage{todonotes}
+\usepackage{hyperref}
+\usepackage{glossaries}
+\makeglossaries
+
+\usepackage[nottoc]{tocbibind} % add list of figure and tables and put them in content 
+
+\usepackage{geometry}
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in 
+
+
+\linespread{1.3} % Line spacing
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+\include{Title/Title}
+%------------------------------------------------------------------------------------
+% Document begin
+%------------------------------------------------------------------------------------
+\begin{document}
+\pagenumbering{gobble} %stop page number
+%------------------------------------------------------------------------------------
+% Page Title
+%------------------------------------------------------------------------------------
+\begin{titlepage}
+
+\maketitle
+\vfill
+\center \date{\normalsize September 2015} % Today's date or a custom date
+\end{titlepage}
+% -----------------------------------------------------------------------------------
+
+\pagenumbering{Roman} 
+\justify
+\include{Dedication/dedication}
+\include{Declaration/declaration}
+\include{Acknowledgement/acknowledgement}
+\include{Abstract/abstract}
+
+%------------------------------------------------------------------------------------
+% Table of content
+%------------------------------------------------------------------------------------
+\tableofcontents
+\pagebreak
+\listoffigures
+\pagebreak
+\listoftables
+\justify
+%------------------------------------------------------------------------------------
+% Document begin
+%------------------------------------------------------------------------------------
+\clearpage
+\pagenumbering{arabic}
+\include{Chapter00/introduction}
+\include{Chapter01/BackgroundResearch}
+\include{Chapter02/TechnologicalChoices}
+\include{Chapter03/ProjectPlan}
+\include{Chapter04/Design}
+\include{Chapter05/Requirement}
+\include{Chapter06/Implementation}
+\include{Chapter07/Reflection}
+\include{Chapter08/FutureWork}
+\include{Chapter09/Conclusion}
+
+%-----------------------------------------------------------------------------------------
+
+\clearpage
+\bibliographystyle{ieeetr}
+\bibliography{References/references}
+
+\clearpage
+\begin{appendices}
+\include{Appendix1/appendix1}
+\include{Appendix2/appendix2}
+
+\end{appendices}
+\end{document}
